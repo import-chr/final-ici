@@ -1,0 +1,22 @@
+\titleformat{\chapter}[block]
+    {\normalfont\fontsize{14pt}{18pt}\bfseries\centering\rmfamily}
+    {}
+    {0pt}
+    {}
+
+\titlespacing*{\chapter}
+    {0pt}
+    {-0.8cm}
+    {0mm}
+
+\chapter*{\sloppy Oficio de Designación de Tema de Tesis.}
+\addcontentsline{toc}{chapter}{Oficio de Designación de Tema de Tesis}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+\begin{minipage}{\textwidth}
+    \newgeometry{top = 1cm, bottom = 1cm, left = 1cm, right = 1cm}
+        \includepdf[pages = 1, scale = 0.7, pagecommand = {}, clip]{sections/oficios/designacionTema.pdf}
+    \restoregeometry
+\end{minipage}
