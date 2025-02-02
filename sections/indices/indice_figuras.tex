@@ -1,0 +1,26 @@
+\titleformat{\chapter}[block]
+    {\normalfont\fontsize{14pt}{18pt}\bfseries\centering\rmfamily}
+    {}
+    {0pt}
+    {}
+
+\titlespacing*{\chapter}
+    {0pt}
+    {-0.8cm}
+    {0mm}
+
+\chapter*{\sloppy Índice de Figuras.}
+\addcontentsline{toc}{chapter}{Índice de Figuras}
+
+\renewcommand{\listfigurename}{}
+\renewcommand{\cftfigleader}{\cftdotfill{\cftdotsep}}
+
+\setlength{\cftbeforetoctitleskip}{1pt}
+\setlength{\cftaftertoctitleskip}{0pt}
+
+\setlength{\cftbeforefigskip}{0pt}
+
+\renewcommand{\cftfigfont}{\normalfont}
+\renewcommand{\cftfigpagefont}{\bfseries}
+
+\listoffigures
