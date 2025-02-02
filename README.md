@@ -68,8 +68,8 @@ Descarga las imágenes y colócalas en la carpeta `images/`.
 ```json
 "latex-workshop.latex.recipes": [
   {
-    "name": "xelatex",
-    "tools": ["xelatex"]
+    "name": "xelatex -> makeglossaries -> xelatex*2",
+    "tools": ["xelatex", "makeglossaries", "xelatex", "xelatex"]
   }
 ],
 
@@ -82,14 +82,25 @@ Descarga las imágenes y colócalas en la carpeta `images/`.
       "-synctex=1",
       "-interaction=nonstopmode",
       "-file-line-error",
+      "-halt-on-error",
+      "-f",
       "-output-directory=build",
       "%DOC%"
     ]
+  },
+
+  {
+    "name": "makeglossaries",
+    "command": "makeglossaries",
+    "args": [
+      "-d", "build",
+      "%DOCFILE%"
+    ],
   }
 ],
 
-"latex.workshop.latex.outDir": "build",
-"latex-workshop.view.pdf.viewer": "tab"
+"latex-workshop.view.pdf.viewer": "tab",
+"latex-workshop.latex.autoBuild.run": "onSave"
 ```
 
 ### Compilación Manual
