@@ -15,12 +15,10 @@
 \usepackage{pdfpages}
 \usepackage{titlesec}
 \usepackage{tocloft}
-
-% \makeatletter
-% \renewcommand{\es@scroman}[1]{\textnormal{#1}}
-% \makeatother
-% \tracingmacros=1
-% \tracingcommands=2
+\usepackage[toc, acronym]{glossaries}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+% \usepackage[none]{hyphenat}
 
 \geometry{
     left = 4cm,
@@ -29,16 +27,31 @@
     bottom = 2.5 cm
 }
 
+% \onehalfspacing
+% \setmainfont[Mapping = tex-text]{Geomanist}
 \overfullrule = 5pt
 
-% \onehalfspacing
+
 \setstretch{1.5}
-% \setmainfont[Mapping = tex-text]{Geomanist}
+
 \setmainfont{Geomanist}[
     ItalicFont = Geomanist-Italic,
     BoldFont = Geomanist-Bold,
     SmallCapsFont = Geomanist
 ]
+    
+\raggedbottom
+\setlength{\emergencystretch}{3em}
+\hyphenpenalty=10000
+\tolerance=1000
+
+\setlength{\parindent}{0pt}
+
+\setglossarysection{chapter}
+\makeglossaries
+% \glsdisablehyper
+% \input{config/glossary_config}
+
 
 \begin{document}
 
@@ -50,5 +63,10 @@
 \include{sections/indices/indice_gen}
 \include{sections/indices/indice_figuras}
 \include{sections/indices/indice_tablas}
+
+\include{sections/abrev_list}
+\printglossary[type = \acronymtype, title = {Listado de Abreviaturas}]
+
+\include{sections/resumen}
 
 \end{document}
