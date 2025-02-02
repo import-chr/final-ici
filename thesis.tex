@@ -50,7 +50,7 @@
 \setglossarysection{chapter}
 \makeglossaries
 % \glsdisablehyper
-% \input{config/glossary_config}
+\input{config/glossary_config}
 
 
 \begin{document}
@@ -65,7 +65,7 @@
 \include{sections/indices/indice_tablas}
 
 \include{sections/abrev_list}
-\printglossary[type = \acronymtype, title = {Listado de Abreviaturas}]
+\printglossary[type = \acronymtype, style = nonumberlist, title = {Listado de Abreviaturas}]
 
 \include{sections/resumen}
 
