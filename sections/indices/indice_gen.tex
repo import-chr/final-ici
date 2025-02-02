@@ -1,0 +1,33 @@
+\titleformat{\chapter}[block]
+    {\normalfont\fontsize{14pt}{18pt}\bfseries\centering\rmfamily}
+    {}
+    {0pt}
+    {}
+
+\titlespacing*{\chapter}
+    {0pt}
+    {-0.8cm}
+    {0mm}
+
+\chapter*{\sloppy Índice General.}
+\addcontentsline{toc}{chapter}{Índice General}
+
+\renewcommand{\contentsname}{\fontsize{12}{18}\selectfont Contenido.}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+\setlength{\cftbeforetoctitleskip}{1pt}
+\setlength{\cftaftertoctitleskip}{0pt}
+
+\setlength{\cftbeforechapskip}{0pt}
+\renewcommand{\cftchapfont}{\bfseries}
+\renewcommand{\cftchappagefont}{\bfseries}
+
+% \setlength{\cftbeforesecskip}{0pt}
+% \renewcommand{\cftsecfont}{\normalfont}
+% \renewcommand{\cftsecpagefont}{\normalfont}
+
+% \setlength{\cftbeforesubsecskip}{0pt}
+% \renewcommand{\cftsubsecfont}{\normalfont}
+% \renewcommand{\cftsubsecpagefont}{\normalfont}
+
+\tableofcontents
