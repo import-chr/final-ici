@@ -1,0 +1,54 @@
+\RequirePackage{silence}
+\WarningFilter{latexfont}{Font shape `TU/Geomanist(0)/m/sc'}
+\WarningFilter{spanish}{Replacing `TU/Geomanist(0)/m/sc'}
+\WarningFilter{latexfont}{Some font shapes were not available, defaults substituted.}
+
+\documentclass[12pt, letterpaper, oneside]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, mexico, es-noshorthands]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{pdfpages}
+\usepackage{titlesec}
+\usepackage{tocloft}
+
+% \makeatletter
+% \renewcommand{\es@scroman}[1]{\textnormal{#1}}
+% \makeatother
+% \tracingmacros=1
+% \tracingcommands=2
+
+\geometry{
+    left = 4cm,
+    top = 3cm,
+    right = 2.5 cm,
+    bottom = 2.5 cm
+}
+
+\overfullrule = 5pt
+
+% \onehalfspacing
+\setstretch{1.5}
+% \setmainfont[Mapping = tex-text]{Geomanist}
+\setmainfont{Geomanist}[
+    ItalicFont = Geomanist-Italic,
+    BoldFont = Geomanist-Bold,
+    SmallCapsFont = Geomanist
+]
+
+\begin{document}
+
+\include{sections/portada}
+\include{sections/designacion_tema}
+\include{sections/auth_print}
+\include{sections/dedicatorias}
+\include{sections/agradecimientos}
+\include{sections/indices/indice_gen}
+\include{sections/indices/indice_figuras}
+\include{sections/indices/indice_tablas}
+
+\end{document}
