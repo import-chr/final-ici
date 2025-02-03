@@ -56,6 +56,9 @@
 \begin{document}
 
 \include{sections/portada}
+
+\pagenumbering{roman}
+
 \include{sections/designacion_tema}
 \include{sections/auth_print}
 \include{sections/dedicatorias}
@@ -68,5 +71,10 @@
 \printglossary[type = \acronymtype, style = nonumberlist, title = {Listado de Abreviaturas}]
 
 \include{sections/resumen}
+
+\setcounter{page}{\numexpr\value{page}\relax}
+\pagenumbering{arabic}
+
+\include{sections/antecedentes}
 
 \end{document}
