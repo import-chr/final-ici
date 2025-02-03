@@ -19,7 +19,7 @@
 \usepackage{ragged2e}
 \usepackage{hyperref}
 \usepackage{csquotes}
-\usepackage[style = apa, backend = biber]{biblatex}
+\usepackage[style = apa, sortcites, backend = biber]{biblatex}
 % \usepackage[none]{hyphenat}
 
 \geometry{
@@ -54,7 +54,7 @@
 % \glsdisablehyper
 \input{config/glossary_config}
 
-\addbibresource{references.bib}
+\addbibresource{sections/bibliography/references.bib}
 
 \begin{document}
 
@@ -82,6 +82,7 @@
 
 \include{sections/antecedentes}
 
-\include{sections/bibliography/biblio}
+\nocite{*}
+\printbibliography[heading = bibintoc, title = {Bibliografía.}]
 
 \end{document}
