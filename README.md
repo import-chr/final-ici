@@ -68,8 +68,8 @@ Descarga las imágenes y colócalas en la carpeta `images/`.
 ```json
 "latex-workshop.latex.recipes": [
   {
-    "name": "xelatex -> makeglossaries -> xelatex*2",
-    "tools": ["xelatex", "makeglossaries", "xelatex", "xelatex"]
+    "name": "xelatex -> makeglossaries -> biber -> xelatex*2",
+    "tools": ["xelatex", "makeglossaries", "biber", "xelatex", "xelatex"]
   }
 ],
 
@@ -96,6 +96,16 @@ Descarga las imágenes y colócalas en la carpeta `images/`.
       "-d", "build",
       "%DOCFILE%"
     ],
+  },
+
+  {
+    "name": "biber",
+    "command": "biber",
+    "args": [
+      "-input-directory=build",
+      "-output-directory=build",
+      "%DOCFILE%"
+    ]
   }
 ],
 
