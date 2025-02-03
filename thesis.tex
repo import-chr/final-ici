@@ -18,6 +18,8 @@
 \usepackage[toc, acronym]{glossaries}
 \usepackage{ragged2e}
 \usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage[style = apa, backend = biber]{biblatex}
 % \usepackage[none]{hyphenat}
 
 \geometry{
@@ -52,6 +54,7 @@
 % \glsdisablehyper
 \input{config/glossary_config}
 
+\addbibresource{references.bib}
 
 \begin{document}
 
@@ -78,5 +81,7 @@
 \setcounter{page}{\value{tempPage}}
 
 \include{sections/antecedentes}
+
+\include{sections/bibliography/biblio}
 
 \end{document}
