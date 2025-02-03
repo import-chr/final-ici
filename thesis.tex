@@ -72,8 +72,10 @@
 
 \include{sections/resumen}
 
-\setcounter{page}{\numexpr\value{page}\relax}
+\newcounter{tempPage}
+\setcounter{tempPage}{\value{page}}
 \pagenumbering{arabic}
+\setcounter{page}{\value{tempPage}}
 
 \include{sections/antecedentes}
 
