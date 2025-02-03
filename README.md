@@ -118,15 +118,9 @@ Para automatizar la compilación con `latexmk` y asegurarte de que use XeLaTeX, 
 $out_dir = "build";
 $pdflatex = "xelatex -synctex=1 -interaction=nonstopmode";
 $pdf_mode = 5;
-
-@generated_exts = qw(aux bbl blg fdb_latexmk fls log nav out snm toc synctex.gz);
+$recorder = 0;
+$bibtex_use = 2;
 ```
-
-Ahora puedes compilar el proyecto con `latexmk` simplemente ejecutando:
-```bash
-latexmk
-```
-Esto garantizará que se utilice **XeLaTeX** sin necesidad de especificarlo manualmente cada vez.
 
 ---
 
