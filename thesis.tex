@@ -15,7 +15,7 @@
 \usepackage{pdfpages}
 \usepackage{titlesec}
 \usepackage{tocloft}
-\usepackage[toc, acronym]{glossaries}
+\usepackage[toc, acronym, nogroupskip]{glossaries}
 \usepackage{ragged2e}
 \usepackage{hyperref}
 \usepackage{csquotes}
@@ -70,7 +70,7 @@
 \include{sections/indices/indice_tablas}
 
 \include{sections/abrev_list}
-\printglossary[type = \acronymtype, style = nonumberlist, title = {Listado de Abreviaturas}]
+\printglossary[nogroupskip = true, type = \acronymtype, style = nonumberlist, title = {Listado de Abreviaturas}]
 
 \include{sections/resumen}
 
