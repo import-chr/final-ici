@@ -12,15 +12,17 @@
 \chapter*{\sloppy Índice de Tablas.}
 \addcontentsline{toc}{chapter}{Índice de Tablas}
 
-\renewcommand{\listtablename}{}
+\renewcommand{\listtablename}{\fontsize{12}{18}\selectfont Contenido.}
 \renewcommand{\cftfigleader}{\cftdotfill{\cftdotsep}}
 
-\setlength{\cftbeforetoctitleskip}{1pt}
-\setlength{\cftaftertoctitleskip}{0pt}
+\setlength{\cftbeforelottitleskip}{1pt}
+\setlength{\cftafterlottitleskip}{0pt}
 
 \setlength{\cftbeforetabskip}{0pt}
-
 \renewcommand{\cfttabfont}{\normalfont}
-\renewcommand{\cfttabpagefont}{\bfseries}
+\renewcommand{\cfttabpagefont}{\normalfont}
+
+\renewcommand{\cfttabpresnum}{Tabla~}
+\renewcommand{\cfttabnumwidth}{4em}
 
 \listoftables
