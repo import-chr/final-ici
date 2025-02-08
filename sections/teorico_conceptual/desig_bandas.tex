@@ -37,9 +37,9 @@
 \begin{table}[h!]
     \centering
     \caption{Designaciones de Banda \gls{ccir}}
-    \begin{tabular}{ccc}
+    \begin{tabularx}{\textwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X}
         \hline
-        Número de banda & Intervalo de frecuencias & Designación \\
+        Número de banda & Intervalo de frecuencias* & Designación \\
         \hline
         2 & 30 Hz - 300 Hz & \gls{elf} \\
         3 & 0.3 kHz - 3 kHz & \gls{vf} \\
@@ -52,5 +52,11 @@
         10 & 3 GHz - 30 GHz & \gls{shf} \\
         11 & 30 GHz - 300 GHz & \gls{ehf} \\
         \hline
-    \end{tabular}
+        \multicolumn{3}{c}{
+            *\ensuremath{10^{0}}~\glsentryfull{hz};
+            \ensuremath{10^{3}}~\glsentryfull{khz};
+            \ensuremath{10^{6}}~\glsentryfull{mhz};
+            \ensuremath{10^{9}}~\glsentryfull{ghz}            
+        }
+    \end{tabularx}
 \end{table}
