@@ -18,4 +18,23 @@
 \addcontentsline{toc}{section}{Global Navigation Satellite System (GNSS)}
 
 \begin{justify}
+    El término \gls{gnss} se define como el conjunto de todos los sistemas de \gls{satnav} y sus aumentaciones. El GNSS proporciona información precisa, continua y mundial
+    sobre la posición tridimensional y la velocidad a los usuarios que cuentan con el equipo receptor adecuado; además, también difunde el tiempo dentro de la escala de \gls{utc}.
+    Las constelaciones globales dentro del \gls{gnss}, a veces denominadas constelaciones principales, consisten nominalmente en 24 o más satélites en \gls{meo} dispuestos
+    en 3 o 6 planos orbitales con cuatro o más satélites por plano. Una red de monitoreo y control en tierra supervisa la salud y el estado de los satélites.
+    Esta red también carga datos de navegación y otra información en los satélites.\\
+
+    Con la excepción del \gls{rdss} proporcionado por una parte del sistema \gls{bds}, que se basa en el cálculo de rangos activos a satélites geoestacionarios para la determinación
+    de la posición, estos sistemas \gls{satnav} utilizan el concepto de medición unidireccional del \gls{toa}. Las transmisiones de los satélites están referenciadas a estándares
+    de frecuencia atómicos altamente precisos a bordo de los satélites, los cuales están sincronizados con una base de tiempo interna del sistema. Todos los sistemas
+    \gls{satnav} transmiten códigos de alcance y datos de navegación en dos o más frecuencias utilizando una técnica llamada \gls{dsss}.\\
+
+    Cada satélite transmite señales con el componente de código de alcance precisamente sincronizado a una escala de tiempo común. Los datos de navegación permiten que el
+    receptor determine la ubicación del satélite en el momento de la transmisión de la señal, mientras que el código de alcance permite que el receptor del usuario determine
+    el tiempo de tránsito de la señal y, por lo tanto, la distancia entre el satélite y el usuario. Esta técnica requiere que el receptor del usuario también contenga un reloj.
+    Para determinar la ubicación tridimensional del receptor utilizando esta técnica, es necesario realizar mediciones TOA a cuatro satélites. Si el reloj del receptor
+    estuviera sincronizado con los relojes de los satélites, solo se necesitarían tres mediciones de distancia. Sin embargo, en los receptores de navegación generalmente
+    se emplea un reloj de cristal para minimizar el costo, la complejidad y el tamaño del receptor. Por lo tanto, se requieren cuatro mediciones para determinar la latitud,
+    la longitud, la altura del usuario y la desviación del reloj del receptor con respecto a la base de tiempo interna del sistema. Si el tiempo del sistema o la altitud se
+    conocen con precisión, se requieren menos de cuatro satélites.
 \end{justify}
