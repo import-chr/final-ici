@@ -1,0 +1,89 @@
+\phantomsection
+\section*{\fontsize{12}{18}\selectfont Ruido.}
+\addcontentsline{toc}{section}{Ruido}
+
+\begin{justify}
+    Se define como ruido eléctrico como cualquier energía eléctrica indeseable que queda entre la banda
+    de paso de la señal. Se puede clasificar en dos categorías: correlacionado y no correlacionado. El
+    ruido correlacionado sólo existe cuando hay una señal; el ruido no correlacionado está presente siempre,
+    haya o no una señal \parencite{tomasi2003sistemas}.
+\end{justify}
+
+\phantomsection
+\subsection*{\fontsize{12}{18}\selectfont Ruido no correlacionado.}
+\addcontentsline{toc}{subsection}{Ruido no correlacionado}
+
+\begin{justify}
+    Este tipo de ruido está presente independientemente de la presencia de una señal. Se subdivide en:
+
+    \begin{itemize}
+        \item \textbf{Ruido externo.} Se genera fuera del dispositivo o circuito. Hay tres causas principales:
+        
+        \begin{itemize}
+            \item \textbf{Ruido atmosférico.} Se origina en perturbaciones eléctricas naturales dentro de la atmósfera;
+            se le suele llamar electricidad estática.
+            \item \textbf{Ruido extraterrestre.} Consiste en señales eléctricas originadas fuera de la atmósfera de la Tierra,
+            a veces se le llama ruido de espacio profundo y se subdivide en solar y cósmico.
+            \item \textbf{Ruido causado por el hombre.} Tiene naturaleza de pulsos, y contiene una amplia gama de frecuencias, que
+            se propagan en el espacio del mismo modo que las ondas de radio. También se le llama ruido industrial.
+        
+        \end{itemize}
+        \item \textbf{Ruido interno.} Es la interferencia eléctrica que se genera dentro del dispositivo o circuito. Sus tres
+        causas principales son:
+        
+        \begin{itemize}
+            \item \textbf{Ruido de disparo.} Se genera debido a la llegada aleatoria de portadores de carga (electrones y huecos) a la salida de dispositivos electrónicos
+            como diodos y transistores. Fue identificado por primera vez en la corriente anódica de un amplificador de tubo al vacío y modelado matemáticamente por W. Schottky
+            en 1918. Dado que los portadores de corriente no fluyen de manera continua y uniforme, sino que siguen trayectorias irregulares, el ruido resultante presenta
+            variaciones aleatorias que se superponen a la señal útil.
+            \item \textbf{Ruido de tiempo de tránsito.} Se genera cuando una corriente de portadores experimenta variaciones irregulares y aleatorias
+            mientras se desplaza a través de un dispositivo, como de un emisor a un colector en un transistor. Este ruido se vuelve notable cuando el
+            tiempo de propagación de los portadores en el dispositivo es una fracción significativa del período de la señal.
+            \item \textbf{Ruido térmico.} Es generado por el movimiento aleatorio de los electrones en un conductor debido a la agitación térmica.
+            Este fenómeno fue identificado por primera vez en 1927 por J. B. Johnson en los laboratorios Bell y se asocia con el movimiento browniano de las partículas.
+            Es un ruido presente en todas las frecuencias, por lo que también se le conoce como "ruido blanco".
+        \end{itemize}
+
+    \end{itemize}
+\end{justify}
+
+\phantomsection
+\subsection*{\fontsize{12}{18}\selectfont Ruido correlacionado.}
+\addcontentsline{toc}{subsection}{Ruido correlacionado}
+
+\begin{justify}
+    Se relaciona mutuamente (se correlaciona) con la señal, y no puede estar en un circuito a menos que haya una señal de entrada. Incluye:
+
+    \begin{itemize}
+        \item \textbf{Distorsión armónica.} Ocurre cuando una señal experimenta la generación de armónicas no deseadas debido a la amplificación no lineal.
+        Las armónicas son múltiplos enteros de la frecuencia fundamental de la señal de entrada. La primera armónica corresponde a la señal original, mientras que la
+        segunda y tercera armónica son el doble y el triple de esta frecuencia, respectivamente. También se conoce como distorsión de amplitud.
+        \item \textbf{Distorsión por intermodulación.} Ocurre cuando se generan frecuencias no deseadas debido a la amplificación de múltiples señales en un
+        dispositivo no lineal, como un amplificador de gran señal. Se caracteriza por la producción de frecuencias de suma y diferencia a partir de las señales
+        de entrada, denominadas productos cruzados. Aunque en algunos casos la generación de estas frecuencias es intencional en circuitos de comunicación,
+        cuando es indeseada puede afectar la calidad de la señal.
+    \end{itemize}
+\end{justify}
+
+\phantomsection
+\subsection*{\fontsize{12}{18}\selectfont Ruido impulsivo.}
+\addcontentsline{toc}{subsection}{Ruido impulsivo}
+
+\begin{justify}
+    Se caracteriza por presentar picos de gran amplitud y corta duración dentro del espectro total del ruido. Consiste en ráfagas de pulsos irregulares
+    que pueden durar desde microsegundos hasta fracciones de milisegundo, dependiendo de su origen y amplitud. En comunicaciones de voz, este ruido suele ser más
+    molesto que perjudicial, ya que genera sonidos de explosión o crepitación. Sin embargo, en circuitos de transmisión de datos, puede tener efectos severos,
+    generando errores en la transmisión. Este tipo de ruido es más frecuente en sistemas que operan con inducción mutua y radiación electromagnética,
+    razón por la cual se le considera un tipo de ruido externo. Entre sus principales fuentes se incluyen interrupciones en interruptores electromecánicos
+    como relevadores y solenoides, motores eléctricos, electrodomésticos y alumbrado fluorescente.
+\end{justify}
+
+\phantomsection
+\subsection*{\fontsize{12}{18}\selectfont Interferencia.}
+\addcontentsline{toc}{subsection}{Interferencia}
+
+\begin{justify}
+    La interferencia es una forma de ruido externo que ocurre cuando las señales de una fuente producen frecuencias fuera de su ancho de banda asignado,
+    afectando otras señales de diferentes fuentes. Esto sucede cuando las armónicas o productos cruzados de una señal caen en la banda de paso de un canal vecino,
+    generando interferencia.
+\end{justify}
