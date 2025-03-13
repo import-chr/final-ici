@@ -36,6 +36,7 @@
 
     \begin{equation}
         v(t) = V \sin(2\pi f t + \theta)
+        \label{sin_mod}
     \end{equation}
 
     donde
@@ -110,6 +111,23 @@
 \addcontentsline{toc}{subsection}{Binary Phase Shift Keying (BPSK)}
 
 \begin{justify}
+    La modulación por \gls{psk} es un esquema de modulación digital que transmite datos cambiando o modulando la fase de la señal portadora. La Modulación por
+    \gls{bpsk} también se conoce como Modulación por \gls{prk} o 2\gls{psk}. Es la forma más simple de \gls{psk}. Utiliza dos fases que están separadas por $180^\circ$,
+    por lo que también se puede denominar 2-\gls{psk}. No es particularmente importante dónde se posicionan exactamente los puntos de la constelación, y pueden mostrarse
+    en el eje real de $0^\circ$ y $180^\circ$. La forma general de \gls{bpsk} es:
+
+    \begin{equation}
+        s_n (t) = \sqrt{\frac{2 E_b}{T_b}} \cos(2 \pi f_c t + \pi (1 - n)),\; n = 0,1
+        \label{bpsk}
+    \end{equation}
+
+    donde
+    \begin{equation*}
+        \begin{array}{rl}
+            E_b & = \text{energía por bit}\\
+            T_b & = \text{duración de un bit}
+        \end{array}
+    \end{equation*}
 \end{justify}
 
 \phantomsection
@@ -117,6 +135,15 @@
 \addcontentsline{toc}{subsection}{Quadrature Phase Shift Keying (QPSK)}
 
 \begin{justify}
+    La Modulación por \gls{qpsk} es una forma de modulación por desplazamiento de fase en la que se utilizan cuatro fases
+    diferentes para transmitir datos. Es una forma de modulación por desplazamiento de fase de múltiples niveles (MPSK). \gls{qpsk} utiliza cuatro puntos de
+    constelación, situados en los ejes real e imaginario. QPSK es un esquema de modulación digital en el que la señal de información se codifica en la fase
+    de dos señales portadoras de la misma frecuencia, en cuadratura entre sí y desfasadas en $90^\circ$. La forma general de \gls{qpsk} es:
+
+    \begin{equation}
+        s_n (t) = \sqrt{\frac{2 E_b}{T_b}} \cos(2 \pi f_c t + \pi (1 - 2n)),\; n = 0,1,2,3
+        \label{qpsk}
+    \end{equation}
 \end{justify}
 
 \phantomsection
