@@ -10,73 +10,102 @@
 \end{justify}
 
 \phantomsection
-\subsection*{\fontsize{12}{18}\selectfont Ruido no correlacionado.}
-\addcontentsline{toc}{subsection}{Ruido no correlacionado}
+\subsection*{\fontsize{12}{18}\selectfont Ruido Blanco.}
+\addcontentsline{toc}{subsection}{Ruido Blanco}
 
 \begin{justify}
-    Este tipo de ruido está presente independientemente de la presencia de una señal. Se subdivide en:
+    El ruido blanco es un tipo de señal aleatoria cuyo valor en diferentes momentos no tiene relación estadística, siendo
+    completamente aleatorio. Su característica distintiva es una \gls{psd} constante \parencite{haykin2008communication} en todas
+    las frecuencias. Esto quiere decir que todas las frecuencias dentro del ruido tienen la misma potencia y ninguna sobresale
+    sobre las demás, resultando en una gráfica espectral plana. Su nombre proviene de una analogía con la luz blanca, que incluye todas
+    las frecuencias del espectro visible con intensidad similar. \\
 
-    \begin{itemize}
-        \item \textbf{Ruido externo.} Se genera fuera del dispositivo o circuito. Hay tres causas principales:
-        
-        \begin{itemize}
-            \item \textbf{Ruido atmosférico.} Se origina en perturbaciones eléctricas naturales dentro de la atmósfera;
-            se le suele llamar electricidad estática.
-            \item \textbf{Ruido extraterrestre.} Consiste en señales eléctricas originadas fuera de la atmósfera de la Tierra,
-            a veces se le llama ruido de espacio profundo y se subdivide en solar y cósmico.
-            \item \textbf{Ruido causado por el hombre.} Tiene naturaleza de pulsos, y contiene una amplia gama de frecuencias, que
-            se propagan en el espacio del mismo modo que las ondas de radio. También se le llama ruido industrial.
-        
-        \end{itemize}
-        \item \textbf{Ruido interno.} Es la interferencia eléctrica que se genera dentro del dispositivo o circuito. Sus tres
-        causas principales son:
-        
-        \begin{itemize}
-            \item \textbf{Ruido de disparo.} Se genera debido a la llegada aleatoria de portadores de carga (electrones y huecos) a la salida de dispositivos electrónicos
-            como diodos y transistores. Fue identificado por primera vez en la corriente anódica de un amplificador de tubo al vacío y modelado matemáticamente por W. Schottky
-            en 1918. Dado que los portadores de corriente no fluyen de manera continua y uniforme, sino que siguen trayectorias irregulares, el ruido resultante presenta
-            variaciones aleatorias que se superponen a la señal útil.
-            \item \textbf{Ruido de tiempo de tránsito.} Se genera cuando una corriente de portadores experimenta variaciones irregulares y aleatorias
-            mientras se desplaza a través de un dispositivo, como de un emisor a un colector en un transistor. Este ruido se vuelve notable cuando el
-            tiempo de propagación de los portadores en el dispositivo es una fracción significativa del período de la señal.
-            \item \textbf{Ruido térmico.} Es generado por el movimiento aleatorio de los electrones en un conductor debido a la agitación térmica.
-            Este fenómeno fue identificado por primera vez en 1927 por J. B. Johnson en los laboratorios Bell y se asocia con el movimiento browniano de las partículas.
-            Es un ruido presente en todas las frecuencias, por lo que también se le conoce como "ruido blanco".
-        \end{itemize}
-
-    \end{itemize}
+    Dado que la señal es no correlativa en el tiempo, sus valores en distintos momentos son independientes entre sí. Al aplicar
+    una descomposición espectral mediante la transformada de Fourier, el ruido blanco revela una distribución uniforme en frecuencia,
+    como una línea horizontal continua debido a que teóricamente posee un ancho de banda infinito.
 \end{justify}
 
 \phantomsection
-\subsection*{\fontsize{12}{18}\selectfont Ruido correlacionado.}
-\addcontentsline{toc}{subsection}{Ruido correlacionado}
+\subsection*{\fontsize{12}{18}\selectfont Ruido Gaussiano.}
+\addcontentsline{toc}{subsection}{Ruido Gaussiano}
 
 \begin{justify}
-    Se relaciona mutuamente (se correlaciona) con la señal, y no puede estar en un circuito a menos que haya una señal de entrada. Incluye:
-
-    \begin{itemize}
-        \item \textbf{Distorsión armónica.} Ocurre cuando una señal experimenta la generación de armónicas no deseadas debido a la amplificación no lineal.
-        Las armónicas son múltiplos enteros de la frecuencia fundamental de la señal de entrada. La primera armónica corresponde a la señal original, mientras que la
-        segunda y tercera armónica son el doble y el triple de esta frecuencia, respectivamente. También se conoce como distorsión de amplitud.
-        \item \textbf{Distorsión por intermodulación.} Ocurre cuando se generan frecuencias no deseadas debido a la amplificación de múltiples señales en un
-        dispositivo no lineal, como un amplificador de gran señal. Se caracteriza por la producción de frecuencias de suma y diferencia a partir de las señales
-        de entrada, denominadas productos cruzados. Aunque en algunos casos la generación de estas frecuencias es intencional en circuitos de comunicación,
-        cuando es indeseada puede afectar la calidad de la señal.
-    \end{itemize}
+    El ruido gaussiano es un tipo específico de interferencia aleatoria que sigue una distribución estadística normal (gaussiana),
+    caracterizada principalmente por tener una media igual a cero y una cierta desviación estándar. De acuerdo con \textcite{carlson2010communication} este ruido es conocido en comunicaciones como \gls{awgn}, una forma
+    comúnmente utilizada en modelos teóricos para analizar el rendimiento de los sistemas de comunicación.
+    El término "aditivo" indica que este ruido se suma directamente a la señal transmitida sin depender de ella; "blanco" implica que su \gls{psd} es constante
+    en todo el espectro, lo que quiere decir que afecta por igual a todas las frecuencias. Por su parte, "gaussiano" denota que los valores del ruido se distribuyen
+    según la curva de campana característica de una distribución normal.
 \end{justify}
 
-\phantomsection
-\subsection*{\fontsize{12}{18}\selectfont Ruido impulsivo.}
-\addcontentsline{toc}{subsection}{Ruido impulsivo}
+% \phantomsection
+% \subsection*{\fontsize{12}{18}\selectfont Ruido no correlacionado.}
+% \addcontentsline{toc}{subsection}{Ruido no correlacionado}
 
-\begin{justify}
-    Se caracteriza por presentar picos de gran amplitud y corta duración dentro del espectro total del ruido. Consiste en ráfagas de pulsos irregulares
-    que pueden durar desde microsegundos hasta fracciones de milisegundo, dependiendo de su origen y amplitud. En comunicaciones de voz, este ruido suele ser más
-    molesto que perjudicial, ya que genera sonidos de explosión o crepitación. Sin embargo, en circuitos de transmisión de datos, puede tener efectos severos,
-    generando errores en la transmisión. Este tipo de ruido es más frecuente en sistemas que operan con inducción mutua y radiación electromagnética,
-    razón por la cual se le considera un tipo de ruido externo. Entre sus principales fuentes se incluyen interrupciones en interruptores electromecánicos
-    como relevadores y solenoides, motores eléctricos, electrodomésticos y alumbrado fluorescente.
-\end{justify}
+% \begin{justify}
+%     Este tipo de ruido está presente independientemente de la presencia de una señal. Se subdivide en:
+
+%     \begin{itemize}
+%         \item \textbf{Ruido externo.} Se genera fuera del dispositivo o circuito. Hay tres causas principales:
+        
+%         \begin{itemize}
+%             \item \textbf{Ruido atmosférico.} Se origina en perturbaciones eléctricas naturales dentro de la atmósfera;
+%             se le suele llamar electricidad estática.
+%             \item \textbf{Ruido extraterrestre.} Consiste en señales eléctricas originadas fuera de la atmósfera de la Tierra,
+%             a veces se le llama ruido de espacio profundo y se subdivide en solar y cósmico.
+%             \item \textbf{Ruido causado por el hombre.} Tiene naturaleza de pulsos, y contiene una amplia gama de frecuencias, que
+%             se propagan en el espacio del mismo modo que las ondas de radio. También se le llama ruido industrial.
+        
+%         \end{itemize}
+%         \item \textbf{Ruido interno.} Es la interferencia eléctrica que se genera dentro del dispositivo o circuito. Sus tres
+%         causas principales son:
+        
+%         \begin{itemize}
+%             \item \textbf{Ruido de disparo.} Se genera debido a la llegada aleatoria de portadores de carga (electrones y huecos) a la salida de dispositivos electrónicos
+%             como diodos y transistores. Fue identificado por primera vez en la corriente anódica de un amplificador de tubo al vacío y modelado matemáticamente por W. Schottky
+%             en 1918. Dado que los portadores de corriente no fluyen de manera continua y uniforme, sino que siguen trayectorias irregulares, el ruido resultante presenta
+%             variaciones aleatorias que se superponen a la señal útil.
+%             \item \textbf{Ruido de tiempo de tránsito.} Se genera cuando una corriente de portadores experimenta variaciones irregulares y aleatorias
+%             mientras se desplaza a través de un dispositivo, como de un emisor a un colector en un transistor. Este ruido se vuelve notable cuando el
+%             tiempo de propagación de los portadores en el dispositivo es una fracción significativa del período de la señal.
+%             \item \textbf{Ruido térmico.} Es generado por el movimiento aleatorio de los electrones en un conductor debido a la agitación térmica.
+%             Este fenómeno fue identificado por primera vez en 1927 por J. B. Johnson en los laboratorios Bell y se asocia con el movimiento browniano de las partículas.
+%             Es un ruido presente en todas las frecuencias, por lo que también se le conoce como "ruido blanco".
+%         \end{itemize}
+
+%     \end{itemize}
+% \end{justify}
+
+% \phantomsection
+% \subsection*{\fontsize{12}{18}\selectfont Ruido correlacionado.}
+% \addcontentsline{toc}{subsection}{Ruido correlacionado}
+
+% \begin{justify}
+%     Se relaciona mutuamente (se correlaciona) con la señal, y no puede estar en un circuito a menos que haya una señal de entrada. Incluye:
+
+%     \begin{itemize}
+%         \item \textbf{Distorsión armónica.} Ocurre cuando una señal experimenta la generación de armónicas no deseadas debido a la amplificación no lineal.
+%         Las armónicas son múltiplos enteros de la frecuencia fundamental de la señal de entrada. La primera armónica corresponde a la señal original, mientras que la
+%         segunda y tercera armónica son el doble y el triple de esta frecuencia, respectivamente. También se conoce como distorsión de amplitud.
+%         \item \textbf{Distorsión por intermodulación.} Ocurre cuando se generan frecuencias no deseadas debido a la amplificación de múltiples señales en un
+%         dispositivo no lineal, como un amplificador de gran señal. Se caracteriza por la producción de frecuencias de suma y diferencia a partir de las señales
+%         de entrada, denominadas productos cruzados. Aunque en algunos casos la generación de estas frecuencias es intencional en circuitos de comunicación,
+%         cuando es indeseada puede afectar la calidad de la señal.
+%     \end{itemize}
+% \end{justify}
+
+% \phantomsection
+% \subsection*{\fontsize{12}{18}\selectfont Ruido impulsivo.}
+% \addcontentsline{toc}{subsection}{Ruido impulsivo}
+
+% \begin{justify}
+%     Se caracteriza por presentar picos de gran amplitud y corta duración dentro del espectro total del ruido. Consiste en ráfagas de pulsos irregulares
+%     que pueden durar desde microsegundos hasta fracciones de milisegundo, dependiendo de su origen y amplitud. En comunicaciones de voz, este ruido suele ser más
+%     molesto que perjudicial, ya que genera sonidos de explosión o crepitación. Sin embargo, en circuitos de transmisión de datos, puede tener efectos severos,
+%     generando errores en la transmisión. Este tipo de ruido es más frecuente en sistemas que operan con inducción mutua y radiación electromagnética,
+%     razón por la cual se le considera un tipo de ruido externo. Entre sus principales fuentes se incluyen interrupciones en interruptores electromecánicos
+%     como relevadores y solenoides, motores eléctricos, electrodomésticos y alumbrado fluorescente.
+% \end{justify}
 
 \phantomsection
 \subsection*{\fontsize{12}{18}\selectfont Interferencia.}
@@ -85,5 +114,5 @@
 \begin{justify}
     La interferencia es una forma de ruido externo que ocurre cuando las señales de una fuente producen frecuencias fuera de su ancho de banda asignado,
     afectando otras señales de diferentes fuentes. Esto sucede cuando las armónicas o productos cruzados de una señal caen en la banda de paso de un canal vecino,
-    generando interferencia.
+    generando interferencia \parencite{tomasi2003sistemas}.
 \end{justify}
