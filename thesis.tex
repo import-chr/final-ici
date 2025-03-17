@@ -5,31 +5,39 @@
 
 \documentclass[12pt, letterpaper, oneside]{report}
 
-\usepackage[utf8]{inputenc}
-\usepackage[spanish, mexico, es-noshorthands]{babel}
-\usepackage{graphicx}
-\usepackage{geometry}
-\usepackage{setspace}
-\usepackage{fontspec}
-\usepackage{xltxtra}
-\usepackage{pdfpages}
-\usepackage{titlesec}
-\usepackage{tocloft}
-\usepackage[toc, acronym, nogroupskip]{glossaries}
-\usepackage{ragged2e}
-\usepackage{hyperref}
-\usepackage{csquotes}
-\usepackage[style = apa, sortcites, backend = biber]{biblatex}
-\usepackage{url}
-\usepackage{array}
-\usepackage{caption}
-\usepackage{datetime2}
-\usepackage{mathtools}
-\usepackage{amsmath}
-\usepackage{tikz}
-\usetikzlibrary{trees}
+\usepackage[utf8]{inputenc} % Codificación de entrada
+\usepackage[spanish, mexico, es-noshorthands]{babel} % Configuración de idioma
+\usepackage{graphicx} % Inclusión de gráficos
+\usepackage{geometry} % Configuración de márgenes
+\usepackage{setspace} % Configuración de interlineado
+\usepackage{fontspec} % Configuración de fuentes
+\usepackage{xltxtra} % Extensiones de XeLaTeX
+\usepackage{pdfpages} % Inclusión de archivos PDF
+\usepackage{titlesec} % Configuración de títulos
+\usepackage{tocloft} % Configuración de tabla de contenidos
+\usepackage[toc, acronym, nogroupskip]{glossaries} % Manejo de glosarios y acrónimos
+\usepackage{ragged2e} % Justificación de texto
+\usepackage{hyperref} % Enlaces y referencias en PDF
+\usepackage{csquotes} % Citas y referencias
+\usepackage[style = apa, sortcites, backend = biber]{biblatex} % Estilo de citas APA
+\usepackage{url} % Manejo de URLs
+\usepackage{array} % Configuración de tablas
+\usepackage{tabularx} % Tablas con ancho ajustable
+\usepackage{multirow} % Tablas con filas y columnas combinadas
+\usepackage{booktabs} % Tablas con mejor formato
+\usepackage{colortbl} % Colores en tablas
+\usepackage{xcolor} % Definición de colores
+\usepackage{caption} % Configuración de leyendas
+\usepackage{datetime2} % Manejo de fechas y horas
+\usepackage{mathtools} % Herramientas matemáticas
+\usepackage{amsmath} % Paquete AMS para matemáticas
+\usepackage[table,xcdraw]{xcolor} % Colores en tablas (duplicado, puede ser eliminado)
+\usepackage{enumitem} % Listas con formato personalizado
+\usepackage{tikz} % Dibujos y gráficos
+\usetikzlibrary{trees} % Librería de árboles para TikZ
 % \usepackage[none]{hyphenat}
 
+% Configuración de margenes
 \geometry{
     left = 4 cm,
     top = 3 cm,
@@ -37,34 +45,46 @@
     bottom = 3 cm
 }
 
-% \onehalfspacing
-% \setmainfont[Mapping = tex-text]{Geomanist}
+% Sobrepaso de margen
 \overfullrule = 5pt
 
-
+% Configuración de interlineado
+% \onehalfspacing
 \setstretch{1.5}
 
+% Configuración de la fuente
+% \setmainfont[Mapping = tex-text]{Geomanist}
 \setmainfont{Geomanist}[
     ItalicFont = Geomanist-Italic,
     BoldFont = Geomanist-Bold,
     SmallCapsFont = Geomanist
 ]
-    
+
+% 
 \raggedbottom
 \setlength{\emergencystretch}{3em}
 \hyphenpenalty = 10000
 \tolerance = 1000
 
+% Configuración de sangría
 \setlength{\parindent}{0pt}
 
+% Archivo de configuración de glosario
 \setglossarysection{chapter}
 \makeglossaries
 \input{config/glossary_config}
 
 \addbibresource{sections/bibliography/references.bib}
 
+% Archivo de configuración de fechas
 \input{config/dateParagraph_config}
 \DTMsetdatestyle{espaniol}
+
+% Archivo de configuración de colores
+\input{config/colors}
+
+% Archivo de configuración de títulos de secciones
+\input{config/titlesec}
 
 % _                _             _                                       _   
 % | |              (_)           | |                                     | |  
@@ -107,6 +127,8 @@
 \include{sections/wa_results}
 
 \include{sections/teorico_conceptual/teorico_concept}
+
+\include{sections/chapters/chapter_1/chapter_1}
 
 % \nocite{*}
 \printbibliography[heading = bibintoc, title = {Bibliografía.}]
