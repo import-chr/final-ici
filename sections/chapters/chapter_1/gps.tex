@@ -1,0 +1,106 @@
+\section{\fontsize{12}{18}\selectfont GPS}
+
+\renewcommand{\thetable}{2}
+\setlist[itemize]{topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=2pt}
+
+\begin{justify}
+    El segmento espacial de \gls{gps} está compuesto por una constelación de satélites que transmiten señales de radio a los usuarios.
+    La Fuerza Aérea de los EE.UU. (\gls{usaf}) ha mantenido en operación un total de 31 satélites \gls{gps} durante una década.\\
+
+    \textbf{Distribución de la Constelación}\\
+    Los satélites \gls{gps} orbitan la Tierra en una órbita terrestre media (\gls{meo}) a una altitud aproximada de 20,200 km, completando
+    dos vueltas al planeta por día. La constelación está organizada en seis planos orbitales distribuidos de manera equidistante alrededor
+    de la Tierra. Cada plano orbital contiene cuatro posiciones asignadas a satélites base, formando una estructura de 24 posiciones en total.
+    Este diseño garantiza que, desde casi cualquier posición en la Tierra, un usuario pueda recibir señales de al menos cuatro satélites simultáneamente,
+    lo que permite la determinación precisa de la ubicación.\\
+
+    \textbf{Generaciones Actuales y Futuras de Satélites}\\
+    La constelación \gls{gps} está compuesta por una combinación de satélites antiguos y modernos. En la TABLA se meustran las Características de las
+    generaciones de satélites, incluyendo Block IIA (2/a. generación, "Advanced"), Block IIR ("Replenishment"), Block IIR-M ("Modernized"), Block IIF ("Follow-on"),
+    \gls{gps} III, and \gls{gps} IIIF ("Follow-on").
+\end{justify}
+
+\begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \multicolumn{2}{|c|}{Satélites Legacy} &
+        \multicolumn{3}{|c|}{Satélites Modernos} \\
+        \hline
+        \includegraphics[width=2.5cm]{images/chapter_1/gps/IIA.jpg} &
+        \includegraphics[width=2.5cm]{images/chapter_1/gps/IIR.jpg} &
+        \includegraphics[width=2.5cm]{images/chapter_1/gps/IIRM.jpg} &
+        \includegraphics[width=2.5cm]{images/chapter_1/gps/IIF.jpg} &
+        \includegraphics[width=2.5cm]{images/chapter_1/gps/IIIA.jpg} \\
+        \hline
+        BLOCK IIA & BLOCK IIR & BLOCK IIR-M & BLOCK IIF & \gls{gps} III/IIIF \\
+        \hline
+        \cellcolor{darkgray}0 operativos & \cellcolor{fluorescentgreen}6 operativos & \cellcolor{fluorescentgreen}7 operativos & \cellcolor{fluorescentgreen}12 operativos & \cellcolor{fluorescentgreen}6 operativos \\
+        \hline
+        \parbox[t]{2.5cm}{
+            {\fontsize{9}{11}\selectfont
+                \begin{itemize}[leftmargin=*]
+                    \item Coarse Acquisition (C/A) Code en L1 para usuarios civiles.
+                    \item Precise P(Y) Code en L1 y L2 para usuarios militares.
+                    \item 7.5 años de vida útil.
+                    \item Lanzados entre 1990 y 1997.
+                    \item Último satélite retirado en 2019.
+                \end{itemize}
+            }
+        } &
+        \parbox[t]{2.5cm}{
+            {\fontsize{9}{11}\selectfont
+                \begin{itemize}[leftmargin=*]
+                    \item (C/A) Code en L1.
+                    \item P(Y) Code en L1 y L2.
+                    \item Monitoreo de la señal de reloj.
+                    \item 7.5 años de vida útil.
+                    \item Lanzados entre 1997 y 2004.
+                \end{itemize}
+            }
+        } &
+        \parbox[t]{2.5cm}{
+            {\fontsize{9}{11}\selectfont
+                \begin{itemize}[leftmargin=*]
+                    \item Todas las señales heredadas.
+                    \item 2/a. señal civil en L2 (L2C).
+                    \item Nuevas señales militares M Code para resistencia a interferencias mejorada.
+                    \item Niveles de potencia flexibles para señales militares.
+                    \item 7.5 años de vida útil.
+                    \item Lanzados entre 2005 y 2009.
+                \end{itemize}
+            }
+        } &
+        \parbox[t]{2.5cm}{
+            {\fontsize{9}{11}\selectfont
+                \begin{itemize}[leftmargin=*]
+                    \item Todas las señales Block IIR-M.
+                    \item 2/a. señal civil en L5.
+                    \item Relojes atómicos más precisos.
+                    \item Mejora en presición, fuerza de la señal y calidad.
+                    \item 12 años de vida útil.
+                    \item Lanzados entre 2010 y 2016.
+                \end{itemize}
+            }
+        } &
+        \parbox[t]{2.5cm}{
+            {\fontsize{9}{11}\selectfont
+                \begin{itemize}[leftmargin=*]
+                    \item Todas las señales Block IIF.
+                    \item 4/a. señal civil en L1C.
+                    \item Mayor fiabilidad, precisión e integridad de la señal.
+                    \item Sin Disponibilidad Selectiva.
+                    \item 15 años de vida útil.
+                    \item IIIF: reflectores láser; carga útil de búsqueda y rescate.
+                    \item Primer lanzamiento en 2018.
+                \end{itemize}
+                \vspace{5pt}
+            }
+        } \\
+        \hline
+    \end{tabular}
+    \caption{Características de las Generaciones de Satélites \gls{gps}}
+    \label{tab:gps_satellites}
+\end{table}
