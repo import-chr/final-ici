@@ -1,4 +1,4 @@
-\section{\fontsize{12}{18}\selectfont GPS}
+\section{GPS}
 
 \renewcommand{\thetable}{2}
 \setlist[itemize]{topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=2pt}
@@ -7,20 +7,20 @@
     El segmento espacial de \gls{gps} está compuesto por una constelación de satélites que transmiten señales de radio a los usuarios.
     La Fuerza Aérea de los EE.UU. (\gls{usaf}) ha mantenido en operación un total de 31 satélites \gls{gps} durante una década.\\
 
-    \textbf{Distribución de la Constelación}\\
+    \noindent\textbf{Distribución de la Constelación}\\
     Los satélites \gls{gps} orbitan la Tierra en una órbita terrestre media (\gls{meo}) a una altitud aproximada de 20,200 km, completando
     dos vueltas al planeta por día. La constelación está organizada en seis planos orbitales distribuidos de manera equidistante alrededor
     de la Tierra. Cada plano orbital contiene cuatro posiciones asignadas a satélites base, formando una estructura de 24 posiciones en total.
     Este diseño garantiza que, desde casi cualquier posición en la Tierra, un usuario pueda recibir señales de al menos cuatro satélites simultáneamente,
     lo que permite la determinación precisa de la ubicación.\\
 
-    \textbf{Generaciones Actuales y Futuras de Satélites}\\
+    \noindent\textbf{Generaciones Actuales y Futuras de Satélites}\\
     La constelación \gls{gps} está compuesta por una combinación de satélites antiguos y modernos. En la TABLA se meustran las Características de las
     generaciones de satélites, incluyendo Block IIA (2/a. generación, "Advanced"), Block IIR ("Replenishment"), Block IIR-M ("Modernized"), Block IIF ("Follow-on"),
     \gls{gps} III, and \gls{gps} IIIF ("Follow-on").
 \end{justify}
 
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \renewcommand{\arraystretch}{1.5}
     \setlength{\tabcolsep}{5pt}
@@ -104,3 +104,72 @@
     \caption{Características de las Generaciones de Satélites \gls{gps}}
     \label{tab:gps_satellites}
 \end{table}
+
+\subsection{Banda L2C}
+
+\begin{justify}
+    \textbf{Características}
+    % IS-GPS-200N p. 13-14
+    \begin{itemize}[itemsep=2pt]
+        \item Frecuencia central 1227.60 MHz.
+        \item Ancho de banda:
+        \begin{itemize}
+            \item 20.46 MHz. para Block IIR, IIR-M e IIF.
+            \item 30.69 MHz. para GPS III, GPS IIIF.
+        \end{itemize}
+        \item \gls{arns}.
+        \item Diseño de señal moderna (\glsentryshort{cnav}), incluyendo corrección de errores.
+        \item \gls{bpsk}.
+        \item Incluye un canal dedicado para el rastreo sin código.
+    \end{itemize}
+
+    \noindent\textbf{Estado}
+    \begin{itemize}
+        \item Comienzo de transmisiones en 2005 con Block IIR-M.
+        \item Disponible en 24 satélites \gls{gps} con capacidad de control del segmento terrestre para 2023 (a partir de enero de 2020).
+    \end{itemize}
+\end{justify}
+
+\subsection{Banda L5}
+
+\begin{justify}
+    \textbf{Características}
+    % IS-GPS-705J p.9
+    \begin{itemize}
+        \item Frecuencia central 1176.45 MHz.
+        \item Ancho de banda 24 MHz.
+        \item Altamente protegida para Servicios de Radio Navegación Aeronáutica (\gls{arns}).
+        \item Mayor potencia de transmisión que L1 C/A o L2C.
+        \item Mayor ancho de banda para mejorar la resistencia a interferencias.
+        \item Diseño de señal moderna (\glsentryshort{cnav}), incluyendo múltiples tipos de mensajes y corrección de errores.
+        \item \gls{bpsk}.
+        \item Incluye un canal dedicado para el rastreo sin código.
+    \end{itemize}
+
+    \textbf{Estado}
+    \begin{itemize}
+        \item Comienzo de transmisiones en 2010 con Block IIF.
+        \item Disponible en 24 satélites \gls{gps} para el 2027 (a partir de enero de 2020).
+    \end{itemize}
+\end{justify}
+
+\subsection{Banda L1C}
+
+\begin{justify}
+    \textbf{Características}
+    % IS-GPS-800J p. 4
+    \begin{itemize}[itemsep=2pt]
+        \item Frecuencia central 1575.42 MHz.
+        \item Ancho de banda 30.69 MHz.
+        \item \gls{arns}.
+        \item Diseñada para ser interoperable con \gls{gnss}.
+        \item Diseño de señal moderna (\glsentryshort{cnav}-2), incluyendo corrección de errores.
+        \item \gls{mboc}.\\
+    \end{itemize}
+
+    \noindent\textbf{Estado}
+    \begin{itemize}[itemsep=2pt]
+        \item Comienzo de transmisiones en 2018 con \gls{gps} III.
+        \item Disponible en 24 satélites \gls{gps} a finales de la década de 2020.
+    \end{itemize}
+\end{justify}
