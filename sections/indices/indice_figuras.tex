@@ -12,15 +12,19 @@
 \chapter*{\sloppy Índice de Figuras.}
 \addcontentsline{toc}{chapter}{Índice de Figuras}
 
-\renewcommand{\listfigurename}{}
+\renewcommand{\listfigurename}{\fontsize{12}{18}\selectfont Contenido.}
 \renewcommand{\cftfigleader}{\cftdotfill{\cftdotsep}}
 
 \setlength{\cftbeforeloftitleskip}{1pt}
 \setlength{\cftafterloftitleskip}{0pt}
 
-\setlength{\cftbeforefigskip}{0pt}
+\setlength{\cftfigindent}{0pt}
 
+\setlength{\cftbeforefigskip}{0pt}
 \renewcommand{\cftfigfont}{\normalfont}
-\renewcommand{\cftfigpagefont}{\bfseries}
+\renewcommand{\cftfigpagefont}{\normalfont}
+
+\renewcommand{\cftfigpresnum}{Figura~}
+\renewcommand{\cftfignumwidth}{5em}
 
 \listoffigures
