@@ -2,24 +2,179 @@
 \label{sec:galileo}
 
 \begin{justify}
+    El segmento espacial Galileo consta de 27 satélites operativos, distribuidos uniformemente en 3 planos orbitales
+    inclinados 56 grados respecto al ecuador \parencite{gsc_europa}. La constelación además cuenta con 5 satélites no disponibles
+    dando un total de 32 satélites.
 \end{justify}
 
-\subsection{Banda E1}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/chapter_1/galileo/COUNT1_E_LAST_numberSatellites.png}
+    \caption{Número de satélites operativos en la constelación Galileo}
+    \label{fig:galileo_numSatellites}
+\end{figure}
+
+\begin{center}
+    \begin{longtable}{|c|c|c|c|}
+        \caption{Estado de los Satélites Galielo} \label{tab:galileo_satellites} \\
+        \hline
+        \cellcolor{lightblue}Nombre del Satélite & \cellcolor{lightblue}SV ID & \cellcolor{lightblue}Reloj & \cellcolor{lightblue}Estado \\
+        \hline
+        \endfirsthead
+
+        \multicolumn{4}{c}{{\tablename\ \thetable{} - Continuación}} \\
+        \hline
+        \cellcolor{lightblue}Nombre del Satélite & \cellcolor{lightblue}SV ID & \cellcolor{lightblue}Reloj & \cellcolor{lightblue}Estado \\
+        \hline
+        \endhead
+
+        \hline
+        \multicolumn{4}{r}{{\fontsize{9}{11}\selectfont Continúa en la siguiente página...}} \\
+        \endfoot
+
+        \hline
+        \endlastfoot
+
+        GSAT0101 & E11 & RAFS & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0102 & E12 & RAFS & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0103 & E19 & RAFS & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0104 & E20 & RAFS & \textcolor{burgundy}{No disponible} \\
+        \hline
+        GSAT0201 & E18 & PHM & \textcolor{burgundy}{En desuso} \\
+        \hline
+        GSAT0202 & E14 & PHM & \textcolor{burgundy}{En desuso} \\
+        \hline
+        GSAT0203 & E26 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0204 & E22 & RAFS & \textcolor{burgundy}{En desuso} \\
+        \hline
+        GSAT0205 & E24 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0206 & E30 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0207 & E07 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0208 & E08 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0209 & E09 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0210 & E01 & RAFS & \textcolor{burgundy}{En desuso} \\
+        \hline
+        GSAT0211 & E02 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0212 & E03 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0213 & E04 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0214 & E05 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0215 & E21 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0216 & E25 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0217 & E27 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0218 & E31 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0219 & E36 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0220 & E13 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0221 & E15 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0222 & E33 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0223 & E34 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0224 & E10 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0225 & E29 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0226 & E23 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0227 & E06 & PHM & \textcolor{green}{En uso} \\
+        \hline
+        GSAT0232 & E16 & PHM & \textcolor{green}{En uso} \\
+    \end{longtable}
+\end{center}
 
 \begin{justify}
+    \begin{enumerate}
+        \item \textbf{Nombre del Satélite:} Identificador del satélite Galileo (GSAT): \\
+        GSAT01XX: satélites \gls{iov}. \\
+        GSAT02XX: satélites \gls{foc}.
+        \item \textbf{SV ID (Identificador del Vehículo Espacial):} Es el identificador del código de rango del satélite Galileo. ‘E’ es el indicador de la constelación del sistema Galileo.
+        \item \textbf{Reloj:}
+        \begin{itemize}
+            \item \gls{phm}
+            \item \gls{rafs}
+        \end{itemize}
+        \item \textbf{Estado:}
+        \begin{itemize}
+            \item \textbf{\textcolor{green}{En uso}}: el satélite está operativo y contribuye a la provisión del servicio.
+            \item \textbf{\textcolor{burgundy}{No disponible}}: el satélite no está operativo y no contribuye a la provisión del servicio (NAGU emitido antes de la Declaración de Servicio).
+            \item \textbf{\textcolor{burgundy}{En desuso}}: el satélite no está operativo y no contribuye a la provisión del servicio (NAGU emitido después de la Declaración de Servicio).
+        \end{itemize}
+    \end{enumerate}
+\end{justify}
+
+\subsection{Banda E5}
+
+\begin{justify}
+    La banda E5 consiste de las sub-bandas E5a y E5b, y  se transmiten en las frecuencias 1164 - 1215 MHz asignada al servicio
+    \gls{rnss}.
+
+    \textbf{Características}
+    \begin{itemize}
+        \item Frecuencia central $1191.795$ MHz.
+        \item Ancho de banda $51.15$ MHz.
+        \item Modulación \acrshort{altboc}(15, 10)
+    \end{itemize}
 \end{justify}
 
 \subsection{Banda E5a}
 
 \begin{justify}
+    \textbf{Características}
+    \begin{itemize}
+        \item Frecuencia central $1176.45$ MHz.
+        \item Ancho de banda $20.46$ MHz.
+        \item Modulación \gls{bpsk}(10)
+    \end{itemize}
 \end{justify}
 
 \subsection{Banda E5b}
 
 \begin{justify}
+    \textbf{Características}
+    \begin{itemize}
+        \item Frecuencia central $1207.14$ MHz.
+        \item Ancho de banda $20.46$ MHz.
+        \item Modulación \gls{bpsk}(10)
+    \end{itemize}
 \end{justify}
 
 \subsection{Banda E6}
 
 \begin{justify}
+    \textbf{Características}
+    \begin{itemize}
+        \item Frecuencia central $1278.75$ MHz.
+        \item Ancho de banda $40.92$ MHz.
+        \item Modulación \gls{bpsk}(5)
+    \end{itemize}
+\end{justify}
+
+\subsection{Banda E1}
+
+\begin{justify}
+    \textbf{Características}
+    \begin{itemize}
+        \item Frecuencia central $1575.42$ MHz.
+        \item Ancho de banda $24.552$ MHz.
+        \item Modulación \gls{cboc}(6, 1, 1/11)
+    \end{itemize}
 \end{justify}
