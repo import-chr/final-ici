@@ -27,15 +27,29 @@
     \gls{gps} III, and \gls{gps} IIIF ("Follow-on").
 \end{justify}
 
-\begin{table}[H]
-    \centering
-    \renewcommand{\arraystretch}{1.5}
-    \setlength{\tabcolsep}{5pt}
-    \begin{tabular}{|c|c|c|c|c|}
+\begin{center}
+    \begin{longtable}{|c|c|c|c|c|}
+        \caption{Características de las Generaciones de Satélites \gls{gps}} \label{tab:gps_satellites} \\
         \hline
         \multicolumn{2}{|c|}{Satélites Legacy} &
         \multicolumn{3}{|c|}{Satélites Modernos} \\
         \hline
+        \endfirsthead
+    
+        \multicolumn{5}{c}{{\tablename\ \thetable{} - Continuación}} \\
+        \hline
+        \multicolumn{2}{|c|}{Satélites Legacy} &
+        \multicolumn{3}{|c|}{Satélites Modernos} \\
+        \hline
+        \endhead
+    
+        \hline
+        \multicolumn{5}{r}{{\fontsize{9}{11}\selectfont Continúa en la siguiente página...}} \\
+        \endfoot
+    
+        \hline
+        \endlastfoot
+
         \includegraphics[width=2.5cm]{images/chapter_1/gps/IIA.jpg} &
         \includegraphics[width=2.5cm]{images/chapter_1/gps/IIR.jpg} &
         \includegraphics[width=2.5cm]{images/chapter_1/gps/IIRM.jpg} &
@@ -107,10 +121,8 @@
             }
         } \\
         \hline
-    \end{tabular}
-    \caption{Características de las Generaciones de Satélites \gls{gps}}
-    \label{tab:gps_satellites}
-\end{table}
+    \end{longtable}
+\end{center}
 
 \subsection{Banda L2C}
 
