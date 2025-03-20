@@ -1,10 +1,18 @@
-\titleformat{\chapter}[block]
-    {\normalfont\fontsize{14pt}{18pt}\bfseries\centering\rmfamily}
-    {}
-    {0pt}
-    {}
+% Para capítulos numerados (\chapter)
+\titleformat{\chapter}[display]
+    {\normalfont\fontsize{14pt}{18pt}\bfseries\centering\rmfamily}  % Estilo de la fuente
+    {Capítulo~\thechapter}  % Muestra "Capítulo x"
+    {1em}  % Espacio entre el número y el título
+    {}  % No texto adicional antes del título
+    % [\vspace{0.5em}\titlerule]  % Añade una línea debajo del título
 
 \titlespacing*{\chapter}
-    {0pt}
-    {-0.8cm}
-    {0mm}
+    {0pt}  % Sin sangría
+    {-0.8cm}  % Espacio antes del título
+    {0mm}  % Espacio después del título
+
+% Para capítulos no numerados (\chapter*)
+\newcommand{\mychapter}[1]{
+    \chapter*{\fontsize{14pt}{18pt}\bfseries\centering\rmfamily #1} % Usamos \chapter* para capítulos no numerados
+    \vspace{-0.8cm} % Ajustamos el espacio antes del título
+}
