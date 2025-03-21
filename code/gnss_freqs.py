@@ -1,10 +1,26 @@
 import matplotlib.pyplot as plt
 
 # Datos de las señales
-constellations = ['GPS', 'GPS', 'GPS', 'GLONASS', 'GLONASS', 'GLONASS', 'Galileo', 'Galileo', 'Galileo', 'Galileo']
-signals = ['L1', 'L2', 'L5', 'L1', 'L2', 'L3', 'E1', 'E5a', 'E5b', 'E6']
-frequencies = [1575.42, 1227.60, 1176.45, 1602, 1246, 1202.025, 1575.42, 1176.45, 1207.14, 1278.75]
-bandwidths = [30.69, 20.46, 24.00, 9.00, 6.00, 1.00, 32.00, 24.00, 24.00, 40.00]
+constellations = [
+    'GPS', 'GPS', 'GPS',
+    'GLONASS', 'GLONASS', 'GLONASS',
+    'Galileo', 'Galileo', 'Galileo', 'Galileo'
+    ]
+signals = [
+    'L1', 'L2', 'L5',
+    'L1', 'L2', 'L3',
+    'E1', 'E5a', 'E5b', 'E6'
+    ]
+frequencies = [
+    1575.42, 1227.60, 1176.45,
+    1602, 1246, 1202.025,
+    1575.42, 1176.45, 1207.14, 1278.75
+    ]
+bandwidths = [
+    30.69, 20.46, 24.00,
+    7.31, 5.68, 1.00, # L3 Not Available
+    24.55, 20.46, 20.46, 40.92
+    ]
 
 # Constelaciones colores
 color_map = {
@@ -21,7 +37,7 @@ plt.figure(figsize = (18, 9))
 bars = plt.barh(signals, bandwidths, left = [f - b / 2 for f, b in zip(frequencies, bandwidths)], color = colors, edgecolor = 'black')
 
 # Lineas de frecuencia central
-for i, (bar, freq) in enumerate(zip(bars, frequencies)):
+for i, (bar, freq, bandwidth) in enumerate(zip(bars, frequencies, bandwidths)):
     if i % 2 == 0 or i == 5:
         y_position = bar.get_y() + bar.get_height() + 0.1
     else:
